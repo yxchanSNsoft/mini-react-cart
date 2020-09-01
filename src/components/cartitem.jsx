@@ -20,7 +20,7 @@ class Cartitem extends Component {
           onClick={() => this.props.onIncrement(this.props.cartitem)}
           className="btn btn-secondary btn-sm"
         >
-          Increment
+          +
         </button>
         <button
           onClick={() => this.props.onDelete(this.props.cartitem.id)}
