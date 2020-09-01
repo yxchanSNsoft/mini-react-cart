@@ -44,6 +44,12 @@ class App extends Component {
     this.setState({ cart });
   };
 
+  handleAdd = () => {
+    let cart = this.state.cart
+    cart.push({ id : this.state.cart.length + 1 , value : 0 })
+    this.setState({ cart });
+  }
+
   render() {
     console.log("app - rendered");
     return (
@@ -57,6 +63,7 @@ class App extends Component {
             onReset={this.handleReset}
             onIncrement={this.handleIncrement}
             onDelete={this.handleDelete}
+            onAdd = {this.handleAdd}
           />
         </main>
       </React.Fragment>
